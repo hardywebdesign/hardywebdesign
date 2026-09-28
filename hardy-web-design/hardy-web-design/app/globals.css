@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7f8f6;
+  --surface: #ffffff;
+  --ink: #1c232b;
+  --muted: #5e6b70;
+  --line: #dde3e1;
+  --accent: #1d6b66;
+  --accent-ink: #ffffff;
+  --accent-soft: #e2efec;
+  --danger: #a33a2c;
+  --danger-soft: #fbeae7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #121719;
+    --surface: #1a2124;
+    --ink: #e7ecea;
+    --muted: #9aa7a9;
+    --line: #2c3639;
+    --accent: #5cc0b6;
+    --accent-ink: #0e1a19;
+    --accent-soft: #1d3331;
+    --danger: #f08a78;
+    --danger-soft: #3a1f1b;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+h1, h2 { text-wrap: balance; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
