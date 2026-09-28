@@ -34,3 +34,4 @@ npm run dev
 ## Adding the portfolio later
 
 Replace the redirect in `app/page.tsx` with a real home page, and add routes such as `app/work/page.tsx`.
+Done
