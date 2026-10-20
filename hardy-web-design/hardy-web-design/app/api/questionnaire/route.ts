@@ -42,10 +42,10 @@ export async function POST(req: Request) {
     to: [to],
     replyTo: String(answers.contact_email),
     subject: `New questionnaire: ${client}`,
-    html: `<p>New website questionnaire from <b>${escapeHtml(client)}</b> (${escapeHtml(
+    html: `<p>New project questionnaire from <b>${escapeHtml(client)}</b> (${escapeHtml(
       String(answers.contact_name)
     )}).</p><p>Reply to this email to answer them directly. Their full answers are in the attached PDF.</p>`,
-    attachments: [{ filename: `${fileSlug}-website-questionnaire.pdf`, content: Buffer.from(pdf) }],
+    attachments: [{ filename: `${fileSlug}-project-questionnaire.pdf`, content: Buffer.from(pdf) }],
   });
 
   if (error) {

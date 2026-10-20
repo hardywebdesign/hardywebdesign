@@ -24,7 +24,7 @@ export const SECTIONS: Section[] = [
   {
     id: "about",
     title: "About you",
-    lead: "So I know who I'm building for.",
+    lead: "So I know who I'm working with and what you need.",
     questions: [
       { id: "contact_name", type: "text", label: "Your name", required: true, half: true },
       { id: "business_name", type: "text", label: "Business name", required: true, half: true },
@@ -38,6 +38,25 @@ export const SECTIONS: Section[] = [
         required: true,
       },
       {
+        id: "services_needed",
+        type: "checks",
+        label: "What can we help you with?",
+        hint: "Pick everything that applies.",
+        required: true,
+        options: ["Logo", "Full brand identity", "New website", "Website redesign", "Online shop", "App or custom tool", "Not sure yet"],
+      },
+      {
+        id: "brand_status",
+        type: "radio",
+        label: "Where is your brand today?",
+        options: [
+          "I have a logo and brand I love",
+          "I have a logo, but it needs a refresh",
+          "I need a logo from scratch",
+          "Not sure",
+        ],
+      },
+      {
         id: "ideal_customer",
         type: "area",
         label: "Who is your ideal customer?",
@@ -48,7 +67,7 @@ export const SECTIONS: Section[] = [
   {
     id: "goals",
     title: "Goals",
-    lead: "What the site needs to accomplish.",
+    lead: "What this project needs to accomplish.",
     questions: [
       {
         id: "main_action",
@@ -70,7 +89,7 @@ export const SECTIONS: Section[] = [
       {
         id: "success",
         type: "area",
-        label: "A few months after launch, how will you know the site is working?",
+        label: "A few months after launch, how will you know it's working?",
         hint: "More calls, more bookings, fewer repeat questions, etc.",
       },
       {
@@ -83,7 +102,7 @@ export const SECTIONS: Section[] = [
   {
     id: "content",
     title: "Pages & content",
-    lead: "What goes on the site and who provides it.",
+    lead: "What goes on the site and who provides it. Only need branding? Skip ahead to Look & feel.",
     questions: [
       {
         id: "pages",

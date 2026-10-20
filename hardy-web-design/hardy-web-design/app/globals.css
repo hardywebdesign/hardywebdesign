@@ -1,19 +1,17 @@
 @import "tailwindcss";
 
-/* Same palette as the portfolio (public/styles.css). The portfolio is light-only, so this is too. */
+/* Novela Creative Co palette. Matches public/styles.css (home page) and public/card.html. Light-only, like the home page. */
 :root {
-  --bg: #fff8ef;
+  --bg: #fbf7f1;
   --surface: #ffffff;
-  --ink: #1d1a2f;
-  --muted: #4a4560;
-  --line: #1d1a2f;
-  --accent: #d9401f;
+  --ink: #1f2133;
+  --muted: #565a6e;
+  --line: #e4dacb;
+  --accent: #b83d25;
+  --accent-bright: #e0553a;
   --accent-ink: #ffffff;
-  --accent-soft: #ffe9a8;
-  --punch: #ff5c39;
-  --sun: #ffc93c;
-  --mint: #7ed6b5;
-  --lilac: #b9a6ff;
+  --accent-soft: #fbe3d9;
+  --gold: #e9b44c;
   --danger: #a33a2c;
   --danger-soft: #fbeae7;
 }
@@ -27,17 +25,12 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-accent-soft: var(--accent-soft);
-  --color-punch: var(--punch);
-  --color-sun: var(--sun);
-  --color-mint: var(--mint);
-  --color-lilac: var(--lilac);
+  --color-gold: var(--gold);
   --color-danger: var(--danger);
   --color-danger-soft: var(--danger-soft);
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Instrument Serif", Georgia, serif;
-  --shadow-chunky: 4px 4px 0 var(--ink);
-  --shadow-chunky-lg: 6px 6px 0 var(--ink);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shadow-soft: 0 1px 2px rgba(31, 33, 51, 0.06), 0 12px 32px rgba(31, 33, 51, 0.08);
 }
 
 body {
@@ -45,32 +38,31 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2 { text-wrap: balance; letter-spacing: -0.02em; }
-h1 em, h2 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; letter-spacing: 0; color: var(--punch); }
+h1, h2 { text-wrap: balance; letter-spacing: -0.015em; }
+h1 em, h2 em { font-style: italic; color: var(--accent-bright); }
 
-/* Header and footer match the portfolio's nav */
+/* Logo: the Novela bookmark, same as the home page */
 .logo-mark {
-  display: grid; place-items: center; width: 42px; height: 42px;
-  background: var(--punch); color: #fff; font-weight: 800; font-size: 1.4rem;
-  border: 2px solid var(--ink); border-radius: 14px; box-shadow: 3px 3px 0 var(--ink);
-  transform: rotate(-6deg); transition: transform .3s;
+  display: grid; place-items: start center; width: 34px; height: 44px; padding-top: 5px;
+  background: var(--accent-bright); color: #fff;
+  font: italic 600 1.35rem/1 var(--font-display);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+  border-radius: 4px 4px 0 0; transition: transform .3s ease;
 }
-.logo:hover .logo-mark { transform: rotate(6deg) scale(1.05); }
+.logo:hover .logo-mark { transform: translateY(-3px); }
 
-.btn-chunky {
+.btn-novela {
   display: inline-flex; align-items: center; gap: .5em;
-  background: var(--punch); color: #fff; font-weight: 700; text-decoration: none;
-  border: 2px solid var(--ink); border-radius: 999px; box-shadow: var(--shadow-chunky);
-  transition: transform .15s ease, box-shadow .15s ease;
+  background: var(--ink); color: var(--bg); font-weight: 600; text-decoration: none;
+  border-radius: 999px; transition: transform .2s ease, box-shadow .2s ease;
 }
-.btn-chunky:hover:not(:disabled) { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
-.btn-chunky:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn-novela:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(31, 33, 51, 0.18); }
 
-:focus-visible { outline: 3px solid var(--punch); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent-bright); outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }

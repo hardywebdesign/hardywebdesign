@@ -15,30 +15,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=DM+Sans:opsz,wght@9..40,400..700&display=swap"
         />
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23FF5C39'/><text x='50' y='70' font-size='60' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>"
-        />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className="min-h-screen">
-        <header className="border-b-2 border-line">
+        <header className="border-b border-line">
           <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-4">
-            <a href="/" className="logo flex items-center gap-2.5 no-underline" aria-label={`${STUDIO_NAME} home`}>
-              <span className="logo-mark">H</span>
-              <span className="flex flex-col font-display text-xl font-extrabold leading-none">
-                Hardy
-                <em className="font-serif text-[0.95rem] font-normal text-muted">web design</em>
+            <a href="/" className="logo flex items-center gap-3 no-underline" aria-label={`${STUDIO_NAME} home`}>
+              <span className="logo-mark" aria-hidden="true">
+                N
+              </span>
+              <span className="flex flex-col font-display text-2xl font-medium leading-none">
+                Novela
+                <small className="mt-1.5 font-body text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-muted">
+                  Creative Co.
+                </small>
               </span>
             </a>
             <a href="/#work" className="font-semibold underline-offset-4 hover:underline">
-              ← See my work
+              ← See our work
             </a>
           </div>
         </header>
         {children}
-        <footer className="border-t-2 border-line">
+        <footer className="border-t border-line">
           <div className="mx-auto flex max-w-3xl flex-wrap justify-between gap-2 px-4 py-6 text-sm text-muted">
             <span>
               © {new Date().getFullYear()} {STUDIO_NAME}

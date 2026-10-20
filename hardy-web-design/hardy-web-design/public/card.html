@@ -3,208 +3,176 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Natasha · Hardy Web Design</title>
-  <meta name="description" content="Natasha, web designer and developer at Hardy Web Design. Custom websites, online shops, fundraisers and web tools for small businesses.">
+  <title>Natasha · Novela Creative Co</title>
+  <meta name="description" content="Natasha, founder of Novela Creative Co. Logos and branding, websites and custom apps for small businesses.">
   <!-- Link previews when the card is texted or shared. Update the domain in og:url and og:image when the custom domain is live. -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Natasha · Hardy Web Design">
-  <meta property="og:description" content="Websites with personality that actually work. Tap to see my work, save my contact info or start a project.">
+  <meta property="og:title" content="Natasha · Novela Creative Co">
+  <meta property="og:description" content="Branding, websites and apps for small businesses. Tap to call, save my contact info or start a project.">
   <meta property="og:url" content="https://hardywebdesign.vercel.app/card">
   <meta property="og:image" content="https://hardywebdesign.vercel.app/images/card-share.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#FFF8EF">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23FF5C39'/><text x='50' y='70' font-size='60' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+  <meta name="theme-color" content="#1F2133">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/images/natasha.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #FFF8EF; --paper: #FFFFFF; --ink: #1D1A2F; --ink-soft: #4A4560;
-      --punch: #FF5C39; --punch-dark: #D9401F; --sun: #FFC93C; --mint: #7ED6B5; --lilac: #B9A6FF; --pink: #FF8FB8;
-      --shadow: 6px 6px 0 var(--ink); --shadow-sm: 4px 4px 0 var(--ink);
+      --paper: #FBF7F1; --white: #FFFFFF; --ink: #1F2133; --ink-soft: #565A6E; --line: #E4DACB;
+      --accent: #E0553A; --accent-dark: #B83D25; --accent-soft: #FBE3D9; --gold: #E9B44C;
+      --shadow: 0 1px 2px rgba(31,33,51,.06), 0 12px 32px rgba(31,33,51,.08);
+      --shadow-lg: 0 2px 4px rgba(31,33,51,.08), 0 30px 70px rgba(31,33,51,.18);
+      --serif: "Fraunces", Georgia, serif; --sans: "DM Sans", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
     body {
-      margin: 0; min-height: 100vh; color: var(--ink); font-family: "Bricolage Grotesque", system-ui, sans-serif;
-      background:
-        radial-gradient(420px 320px at 8% 4%, rgba(255,143,184,.45), transparent 70%),
-        radial-gradient(380px 300px at 100% 38%, rgba(126,214,181,.45), transparent 70%),
-        radial-gradient(420px 320px at 0% 100%, rgba(255,201,60,.4), transparent 70%),
-        var(--cream);
-      display: flex; justify-content: center; padding: 28px 16px 48px;
-      -webkit-font-smoothing: antialiased;
+      margin: 0; min-height: 100vh; color: var(--ink); font-family: var(--sans); background: var(--paper);
+      display: flex; justify-content: center; align-items: flex-start; padding: 28px 16px 48px; -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
-    :focus-visible { outline: 3px solid var(--punch); outline-offset: 3px; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
-    .card {
-      width: 100%; max-width: 420px; background: var(--paper);
-      border: 2px solid var(--ink); border-radius: 30px; box-shadow: 8px 8px 0 var(--ink);
-      overflow: hidden; position: relative;
+    .card { width: 100%; max-width: 420px; background: var(--white); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow-lg); overflow: hidden; }
+
+    .banner { height: 132px; background: var(--ink); position: relative; }
+    .banner::after {
+      /* the Novela bookmark hanging from the top edge */
+      content: ""; position: absolute; right: 30px; top: 0; width: 28px; height: 58px; background: var(--accent);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
     }
-    .banner {
-      height: 116px; background: var(--punch); border-bottom: 2px solid var(--ink); position: relative; overflow: hidden;
-    }
-    .banner::before, .banner::after { content: ""; position: absolute; border-radius: 50%; border: 2px solid var(--ink); }
-    .banner::before { width: 130px; height: 130px; background: var(--sun); right: -34px; top: -46px; }
-    .banner::after { width: 80px; height: 80px; background: var(--lilac); left: 22px; bottom: -40px; }
-    .logo {
-      position: absolute; top: 16px; left: 18px; z-index: 1; display: flex; align-items: center; gap: 8px;
-      color: #fff; text-decoration: none; font-weight: 800; font-size: 1.05rem; line-height: 1;
-    }
+    .logo { position: absolute; top: 20px; left: 22px; display: flex; align-items: center; gap: 10px; color: var(--paper); text-decoration: none; }
     .logo b {
-      display: grid; place-items: center; width: 32px; height: 32px; background: var(--paper); color: var(--punch);
-      border: 2px solid var(--ink); border-radius: 10px; transform: rotate(-6deg); font-size: 1.05rem;
+      display: grid; place-items: start center; width: 26px; height: 34px; padding-top: 4px; background: var(--accent); color: #fff;
+      font: italic 600 1.05rem/1 var(--serif); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
     }
-    .logo em { display: block; font-family: "Instrument Serif", serif; font-weight: 400; font-size: .85rem; }
+    .logo span { font: 500 1.25rem/1 var(--serif); display: flex; flex-direction: column; }
+    .logo small { font: 600 .55rem/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; opacity: .7; margin-top: 4px; }
 
-    .photo {
-      width: 148px; height: 148px; margin: -78px auto 0; position: relative; z-index: 2;
-    }
-    .photo img {
-      width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; border-radius: 50%;
-      border: 3px solid var(--ink); box-shadow: var(--shadow-sm); background: var(--cream); display: block;
-    }
-    .photo span {
-      position: absolute; right: -8px; bottom: 6px; background: var(--paper); border: 2px solid var(--ink);
-      border-radius: 999px; padding: 4px 10px; font-weight: 800; font-size: .85rem; transform: rotate(8deg);
-      box-shadow: 2px 2px 0 var(--ink);
-    }
+    .photo { width: 140px; height: 140px; margin: -70px auto 0; position: relative; z-index: 2; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; border-radius: 50%; border: 4px solid var(--white); box-shadow: var(--shadow); display: block; background: var(--paper); }
 
-    .intro { text-align: center; padding: 14px 24px 0; }
-    h1 { margin: 6px 0 2px; font-size: 2.3rem; line-height: 1; letter-spacing: -0.03em; font-weight: 800; }
-    .title { margin: 0; font-weight: 700; color: var(--punch-dark); font-size: 1rem; }
-    .tagline { margin: 12px auto 0; max-width: 30ch; color: var(--ink-soft); line-height: 1.5; font-size: 1rem; }
-    .tagline em { font-family: "Instrument Serif", serif; font-size: 1.15em; color: var(--ink); }
+    .intro { text-align: center; padding: 16px 26px 0; }
+    h1 { margin: 4px 0 4px; font: 500 2.4rem/1 var(--serif); letter-spacing: -0.02em; }
+    .title { margin: 0; font-weight: 600; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-dark); }
+    .tagline { margin: 14px auto 0; max-width: 30ch; color: var(--ink-soft); line-height: 1.55; font-size: 1rem; }
+    .tagline em { font-family: var(--serif); font-style: italic; color: var(--ink); }
+    .phone-num { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 1.1rem; text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 1px; }
 
-    .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding: 16px 20px 0; margin: 0; list-style: none; }
-    .chips li { font-size: .8rem; font-weight: 700; border: 1.5px solid var(--ink); border-radius: 999px; padding: 3px 10px; }
-    .chips li:nth-child(1) { background: #FFE4D6; } .chips li:nth-child(2) { background: #FFF1C2; }
-    .chips li:nth-child(3) { background: #DDF5EC; } .chips li:nth-child(4) { background: #EBE5FF; }
+    .services { display: flex; justify-content: center; gap: 0; margin: 18px 24px 0; padding: 12px 0; border-block: 1px solid var(--line); list-style: none; }
+    .services li { font: italic 500 .98rem var(--serif); padding: 0 12px; }
+    .services li + li { border-left: 1px solid var(--line); }
 
-    .actions { display: grid; gap: 10px; padding: 22px 20px 0; }
+    .actions { display: grid; gap: 10px; padding: 22px 22px 0; }
     .btn {
       display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-      font: 700 1.02rem/1 "Bricolage Grotesque", system-ui, sans-serif; color: var(--ink); text-decoration: none;
-      background: var(--paper); border: 2px solid var(--ink); border-radius: 16px; padding: 15px 16px;
-      box-shadow: 3px 3px 0 var(--ink); cursor: pointer; transition: transform .15s ease, box-shadow .15s ease;
-      -webkit-tap-highlight-color: transparent;
+      font: 600 1rem/1 var(--sans); color: var(--ink); text-decoration: none;
+      background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 15px 16px;
+      cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, border-color .2s; -webkit-tap-highlight-color: transparent;
     }
-    .btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
-    .btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
-    .btn svg { width: 20px; height: 20px; flex: none; }
-    .btn--primary { background: var(--punch); color: #fff; }
-    .btn--save { background: var(--ink); color: var(--cream); }
-    .btn--call { background: var(--mint); }
-    .phone { display: inline-block; margin-top: 12px; font-weight: 800; font-size: 1.15rem; text-decoration: none; border-bottom: 3px solid var(--sun); }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #D6CAB8; }
+    .btn:active { transform: translateY(0); }
+    .btn svg { width: 19px; height: 19px; flex: none; }
+    .btn--primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .btn--accent { background: var(--accent-dark); color: #fff; border-color: var(--accent-dark); }
     .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-    .work { padding: 26px 20px 0; }
-    .label { margin: 0 0 10px; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--punch-dark); }
+    .work { padding: 26px 22px 0; }
+    .label { margin: 0 0 12px; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
     .thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .thumbs a { display: block; text-decoration: none; }
-    .thumbs img {
-      width: 100%; aspect-ratio: 1; object-fit: cover; object-position: left top; display: block;
-      border: 2px solid var(--ink); border-radius: 14px; box-shadow: 3px 3px 0 var(--ink); transition: transform .2s;
-    }
-    .thumbs a:nth-child(1) img { transform: rotate(-3deg); }
-    .thumbs a:nth-child(3) img { transform: rotate(3deg); }
-    .thumbs a:hover img { transform: rotate(0) scale(1.05); }
-    .thumbs span { display: block; text-align: center; font-size: .75rem; font-weight: 700; margin-top: 7px; color: var(--ink-soft); }
+    .thumbs img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: left top; display: block; border: 1px solid var(--line); border-radius: 12px; transition: transform .2s; }
+    .thumbs a:hover img { transform: scale(1.04); }
+    .thumbs span { display: block; text-align: center; font-size: .75rem; font-weight: 500; margin-top: 7px; color: var(--ink-soft); }
 
-    .qr { margin: 26px 20px 0; padding: 18px; border: 2px dashed var(--ink); border-radius: 20px; display: flex; gap: 16px; align-items: center; }
-    .qr__code { width: 112px; height: 112px; flex: none; background: var(--paper); border: 2px solid var(--ink); border-radius: 12px; padding: 6px; }
-    .qr__code svg, .qr__code img { width: 100%; height: 100%; display: block; }
-    .qr p { margin: 0; font-size: .92rem; color: var(--ink-soft); line-height: 1.45; }
-    .qr strong { display: block; color: var(--ink); font-size: 1.02rem; margin-bottom: 4px; }
+    .qr { margin: 26px 22px 0; padding: 18px; background: var(--paper); border-radius: 18px; display: flex; gap: 16px; align-items: center; }
+    .qr__code { width: 108px; height: 108px; flex: none; background: var(--white); border-radius: 10px; padding: 8px; }
+    .qr__code svg { width: 100%; height: 100%; display: block; }
+    .qr p { margin: 0; font-size: .9rem; color: var(--ink-soft); line-height: 1.45; }
+    .qr strong { display: block; color: var(--ink); font: 500 1.1rem var(--serif); margin-bottom: 4px; }
 
-    footer { text-align: center; padding: 22px 20px 24px; font-size: .82rem; color: var(--ink-soft); }
-    footer a { font-weight: 700; color: var(--ink); }
+    footer { text-align: center; padding: 22px 20px 24px; font-size: .85rem; color: var(--ink-soft); }
+    footer a { font-weight: 600; color: var(--ink); }
 
     .toast {
       position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
-      background: var(--ink); color: var(--cream); font-weight: 700; padding: 12px 18px; border-radius: 999px;
-      box-shadow: 3px 3px 0 var(--punch); transition: opacity .2s, transform .2s; z-index: 10;
+      background: var(--ink); color: var(--paper); font-weight: 600; padding: 12px 18px; border-radius: 999px;
+      box-shadow: var(--shadow-lg); transition: opacity .2s, transform .2s; z-index: 10;
     }
     .toast.is-on { opacity: 1; transform: translate(-50%, 0); }
 
-    @media (max-width: 360px) { .row { grid-template-columns: 1fr; } .qr { flex-direction: column; text-align: center; } }
+    @media (max-width: 360px) { .qr { flex-direction: column; text-align: center; } .services li { padding: 0 8px; font-size: .9rem; } }
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-    @media print {
-      body { background: #fff; padding: 0; } .card { box-shadow: none; } .actions, .toast { display: none; }
-    }
+    @media print { body { padding: 0; } .card { box-shadow: none; } .actions, .toast { display: none; } }
   </style>
 </head>
 <body>
   <main class="card">
     <div class="banner">
-      <a class="logo" href="/"><b>H</b><span>Hardy<em>web design</em></span></a>
+      <a class="logo" href="/"><b aria-hidden="true">N</b><span>Novela<small>Creative Co.</small></span></a>
     </div>
 
     <div class="photo">
-      <img src="/images/natasha.webp" alt="Natasha smiling in a black blazer" width="148" height="148">
-      <span>Hi! 👋</span>
+      <img src="/images/natasha.webp" alt="Natasha smiling in a black blazer" width="140" height="140">
     </div>
 
     <div class="intro">
       <h1>Natasha</h1>
-      <p class="title">Web Designer &amp; Developer</p>
-      <p class="tagline">Custom websites with <em>personality</em> for small businesses, makers and community causes.</p>
-      <a class="phone" href="tel:+16162448541">(616) 244-8541</a>
+      <p class="title">Founder &amp; Creative Director</p>
+      <p class="tagline">Helping small businesses tell their story through <em>thoughtful</em> branding, websites and apps.</p>
+      <a class="phone-num" href="tel:+16162448541">(616) 244-8541</a>
     </div>
 
-    <ul class="chips" aria-label="Services">
-      <li>Business websites</li>
-      <li>Online shops</li>
-      <li>Fundraisers</li>
-      <li>Custom tools</li>
+    <ul class="services" aria-label="Services">
+      <li>Branding</li>
+      <li>Websites</li>
+      <li>Apps</li>
     </ul>
 
     <div class="actions">
-      <a class="btn btn--primary" href="/questionnaire">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4z"/></svg>
-        Start a project
-      </a>
-      <a class="btn" href="/#work">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg>
-        See my work
-      </a>
+      <a class="btn btn--primary" href="/questionnaire">Start a project</a>
       <div class="row">
-        <a class="btn btn--call" href="tel:+16162448541">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <a class="btn" href="tel:+16162448541">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
           Call
         </a>
         <a class="btn" href="sms:+16162448541">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Text
         </a>
       </div>
-      <button class="btn btn--save" type="button" id="save">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      <button class="btn btn--accent" type="button" id="save">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
         Save to contacts
       </button>
-      <button class="btn" type="button" id="share">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
-        Share this card
-      </button>
+      <div class="row">
+        <a class="btn" href="/#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg>
+          Our work
+        </a>
+        <button class="btn" type="button" id="share">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+          Share
+        </button>
+      </div>
     </div>
 
     <section class="work" aria-label="Recent work">
       <p class="label">Recent work</p>
       <div class="thumbs">
-        <a href="https://www.naileditwithdeizy.com/" target="_blank" rel="noopener"><img src="/images/shots/deizy-live.jpg" alt="" loading="lazy"><span>Nail shop</span></a>
-        <a href="https://hardycraftstudio.com" target="_blank" rel="noopener"><img src="/images/shots/craft-home.jpg" alt="" loading="lazy"><span>Pattern store</span></a>
+        <a href="https://www.naileditwithdeizy.com/" target="_blank" rel="noopener"><img src="/images/shots/deizy-live.jpg" alt="" loading="lazy"><span>Nail artist</span></a>
+        <a href="https://hardycraftstudio.com" target="_blank" rel="noopener"><img src="/images/shots/craft-home.jpg" alt="" loading="lazy"><span>Pattern shop</span></a>
         <a href="https://rootedflooring.com" target="_blank" rel="noopener"><img src="/images/shots/rooted-home.jpg" alt="" loading="lazy"><span>Flooring co.</span></a>
       </div>
     </section>
 
     <section class="qr" aria-label="QR code for this card">
       <div class="qr__code" id="qr" role="img" aria-label="QR code that opens this card"></div>
-      <p><strong>Meeting in person?</strong>Have them scan this code to open this card on their phone.</p>
+      <p><strong>Meeting in person?</strong>Scan to open this card on your phone.</p>
     </section>
 
     <footer>
@@ -241,7 +209,7 @@
 
     // Share: native share sheet on phones, copy the link everywhere else
     document.getElementById("share").addEventListener("click", async () => {
-      const data = { title: "Natasha · Hardy Web Design", text: "Here's Natasha's card from Hardy Web Design. She builds websites for small businesses:", url: cardUrl };
+      const data = { title: "Natasha · Novela Creative Co", text: "Here's Natasha's card from Novela Creative Co. Branding, websites and apps for small businesses:", url: cardUrl };
       if (navigator.share) {
         try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; }
       }
@@ -260,18 +228,18 @@
         "VERSION:3.0",
         "N:;Natasha;;;",
         "FN:Natasha",
-        "ORG:Hardy Web Design",
+        "ORG:Novela Creative Co",
         "TEL;TYPE=CELL,VOICE:+1-616-244-8541",
-        "TITLE:Web Designer & Developer",
+        "TITLE:Founder & Creative Director",
         "URL:" + siteUrl,
         "URL;TYPE=card:" + cardUrl,
-        "NOTE:Custom websites, online shops, fundraisers and web tools. Start a project: " + location.origin + "/questionnaire",
+        "NOTE:Logos and branding, websites and custom apps. Start a project: " + location.origin + "/questionnaire",
         "END:VCARD",
       ].join("\r\n");
       const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = "Natasha-Hardy-Web-Design.vcf";
+      a.download = "Natasha-Novela-Creative-Co.vcf";
       document.body.appendChild(a);
       a.click();
       a.remove();

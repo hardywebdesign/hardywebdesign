@@ -17,7 +17,7 @@ export async function buildQuestionnairePdf(answers: Answers, opts: { studio: st
   const bold = await doc.embedFont(StandardFonts.HelveticaBold);
 
   const client = String(answers.business_name || answers.contact_name || "New client");
-  doc.setTitle(`Website questionnaire — ${sanitize(client, regular)}`);
+  doc.setTitle(`Project questionnaire — ${sanitize(client, regular)}`);
   doc.setAuthor(opts.studio);
   doc.setCreator(opts.studio);
 
@@ -43,7 +43,7 @@ export async function buildQuestionnairePdf(answers: Answers, opts: { studio: st
   // Header
   write(opts.studio.toUpperCase(), bold, 9, ACCENT);
   y -= 6;
-  write("Website Discovery Questionnaire", bold, 20, INK);
+  write("Project Discovery Questionnaire", bold, 20, INK);
   y -= 2;
   const when = opts.submittedAt.toLocaleString("en-US", {
     dateStyle: "long",

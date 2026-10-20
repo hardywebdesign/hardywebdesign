@@ -63,8 +63,8 @@ export default function Questionnaire() {
 
   if (status.kind === "sent") {
     return (
-      <div className="rounded-3xl border-2 border-line bg-surface p-8 shadow-[var(--shadow-chunky-lg)]">
-        <h2 className="font-display text-3xl font-extrabold">Thank you! <em>Your answers were sent.</em></h2>
+      <div className="rounded-2xl border border-line bg-surface p-8 shadow-[var(--shadow-soft)]">
+        <h2 className="font-display text-3xl font-medium">Thank you! <em>Your answers were sent.</em></h2>
         <p className="mt-2 text-muted">
           I&rsquo;ll review everything and reach out within two business days to schedule our planning call.
         </p>
@@ -74,10 +74,10 @@ export default function Questionnaire() {
 
   return (
     <form onSubmit={submit} noValidate>
-      <div className="sticky top-0 z-10 -mx-4 border-b-2 border-line bg-bg/95 px-4 py-3 backdrop-blur" aria-live="polite">
-        <div className="h-3 overflow-hidden rounded-full border-2 border-line bg-surface">
+      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg/95 px-4 py-3 backdrop-blur" aria-live="polite">
+        <div className="h-1.5 overflow-hidden rounded-full bg-line">
           <div
-            className="h-full bg-sun transition-[width] duration-300"
+            className="h-full bg-accent transition-[width] duration-300"
             style={{ width: `${(answeredCount / ALL_QUESTIONS.length) * 100}%` }}
           />
         </div>
@@ -90,11 +90,11 @@ export default function Questionnaire() {
       </div>
 
       {SECTIONS.map((section, si) => (
-        <section key={section.id} className="grid gap-6 border-b-2 border-dashed border-line/30 py-10">
+        <section key={section.id} className="grid gap-6 border-b border-line py-10">
           <div>
-            <h2 className="flex items-center gap-3 font-display text-2xl font-extrabold sm:text-3xl">
-              <span className="grid h-10 min-w-10 shrink-0 -rotate-6 place-items-center rounded-xl border-2 border-line bg-lilac px-2 font-body text-sm font-bold tabular-nums text-ink shadow-[3px_3px_0_var(--ink)]">
-                {si + 1} / {SECTIONS.length}
+            <h2 className="flex items-baseline gap-3 font-display text-2xl font-medium sm:text-3xl">
+              <span className="shrink-0 font-display text-base font-normal italic tabular-nums text-accent">
+                Chapter {String(si + 1).padStart(2, "0")}
               </span>
               {section.title}
             </h2>
@@ -128,12 +128,12 @@ export default function Questionnaire() {
 
       <div className="grid gap-3 py-8">
         {showErrors && missing.length > 0 && (
-          <p className="rounded-xl border-2 border-danger bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
+          <p className="rounded-xl border border-danger bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
             Please fill in: {missing.map((q) => q.label).join(", ")}.
           </p>
         )}
         {status.kind === "error" && (
-          <p className="rounded-xl border-2 border-danger bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
+          <p className="rounded-xl border border-danger bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
             {status.message}
           </p>
         )}
@@ -141,9 +141,9 @@ export default function Questionnaire() {
           <button
             type="submit"
             disabled={status.kind === "sending"}
-            className="btn-chunky px-7 py-4 text-base disabled:opacity-60"
+            className="btn-novela px-7 py-4 text-base disabled:opacity-60"
           >
-            {status.kind === "sending" ? "Sending…" : "Send my answers ✦"}
+            {status.kind === "sending" ? "Sending…" : "Send my answers"}
           </button>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function Questionnaire() {
 }
 
 const inputClass =
-  "w-full rounded-xl border-2 border-line bg-surface px-3.5 py-3 text-ink placeholder:text-muted focus-visible:outline-none focus-visible:shadow-[3px_3px_0_var(--punch)]";
+  "w-full rounded-xl border border-line bg-surface px-3.5 py-3 text-ink placeholder:text-muted transition-shadow focus-visible:border-accent focus-visible:outline-none focus-visible:shadow-[0_0_0_3px_var(--accent-soft)]";
 
 function Field({
   q,
@@ -204,7 +204,7 @@ function Field({
                   className="peer absolute inset-0 m-0 cursor-pointer opacity-0 disabled:cursor-not-allowed"
                 />
                 <span
-                  className={`inline-block cursor-pointer select-none rounded-full border-2 px-3.5 py-2 text-[15px] transition-transform hover:-translate-y-0.5 peer-checked:bg-sun peer-checked:font-bold peer-checked:shadow-[3px_3px_0_var(--ink)] peer-focus-visible:outline-3 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-punch ${
+                  className={`inline-block cursor-pointer select-none rounded-full border px-4 py-2 text-[15px] transition-colors hover:border-muted peer-checked:border-ink peer-checked:bg-ink peer-checked:text-bg peer-focus-visible:outline-3 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent ${
                     invalid ? "border-danger" : "border-line"
                   } bg-surface`}
                 >
