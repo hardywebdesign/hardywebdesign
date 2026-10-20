@@ -1,7 +1,11 @@
 # Hardy Web Design
 
-Next.js + Tailwind + TypeScript site. For now it hosts the client questionnaire at `/questionnaire`
-(the home page redirects there). When a client submits, the answers are turned into a PDF and emailed to you.
+Next.js + Tailwind + TypeScript site for Hardy Web Design.
+
+- `/` is the portfolio: plain HTML in `public/index.html` with `public/styles.css`, `public/script.js` and `public/images/`
+  (served at `/` by a rewrite in `next.config.ts`). Edit those files directly.
+- `/questionnaire` is the client questionnaire. On submit, the answers are turned into a PDF and emailed to you.
+- The contact form on the home page posts to `/api/contact` and is emailed to you the same way (no PDF).
 
 ## Email setup (one time)
 
@@ -30,8 +34,3 @@ npm install
 cp .env.example .env.local   # fill in the values
 npm run dev
 ```
-
-## Adding the portfolio later
-
-Replace the redirect in `app/page.tsx` with a real home page, and add routes such as `app/work/page.tsx`.
-Done

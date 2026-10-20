@@ -11,9 +11,9 @@ export default function QuestionnairePage() {
   return (
     <main className="mx-auto max-w-3xl px-4 pb-20">
       <div className="pb-6 pt-10">
-        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">New website project</p>
-        <h1 className="mt-2 font-display text-4xl font-bold leading-tight sm:text-5xl">
-          Website Discovery Questionnaire
+        <p className="text-sm font-bold uppercase tracking-[0.12em] text-accent">New website project</p>
+        <h1 className="mt-3 font-display text-4xl font-extrabold leading-[1.05] sm:text-6xl">
+          Let&rsquo;s plan your <em>website.</em>
         </h1>
         <p className="mt-3 max-w-[60ch] text-muted">
           These answers help me plan a site that fits your business, your customers and your budget. Answer what you

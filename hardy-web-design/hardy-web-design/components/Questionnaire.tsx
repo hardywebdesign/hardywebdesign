@@ -63,8 +63,8 @@ export default function Questionnaire() {
 
   if (status.kind === "sent") {
     return (
-      <div className="rounded-xl border border-line bg-surface p-8">
-        <h2 className="font-display text-2xl font-bold">Thank you! Your answers were sent.</h2>
+      <div className="rounded-3xl border-2 border-line bg-surface p-8 shadow-[var(--shadow-chunky-lg)]">
+        <h2 className="font-display text-3xl font-extrabold">Thank you! <em>Your answers were sent.</em></h2>
         <p className="mt-2 text-muted">
           I&rsquo;ll review everything and reach out within two business days to schedule our planning call.
         </p>
@@ -74,10 +74,10 @@ export default function Questionnaire() {
 
   return (
     <form onSubmit={submit} noValidate>
-      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-bg px-4 py-3" aria-live="polite">
-        <div className="h-1.5 overflow-hidden rounded-full bg-line">
+      <div className="sticky top-0 z-10 -mx-4 border-b-2 border-line bg-bg/95 px-4 py-3 backdrop-blur" aria-live="polite">
+        <div className="h-3 overflow-hidden rounded-full border-2 border-line bg-surface">
           <div
-            className="h-full bg-accent transition-[width] duration-300"
+            className="h-full bg-sun transition-[width] duration-300"
             style={{ width: `${(answeredCount / ALL_QUESTIONS.length) * 100}%` }}
           />
         </div>
@@ -90,10 +90,10 @@ export default function Questionnaire() {
       </div>
 
       {SECTIONS.map((section, si) => (
-        <section key={section.id} className="grid gap-6 border-b border-line py-8">
+        <section key={section.id} className="grid gap-6 border-b-2 border-dashed border-line/30 py-10">
           <div>
-            <h2 className="flex items-baseline gap-3 font-display text-2xl font-bold">
-              <span className="font-body text-sm font-semibold tabular-nums text-accent">
+            <h2 className="flex items-center gap-3 font-display text-2xl font-extrabold sm:text-3xl">
+              <span className="grid h-10 min-w-10 shrink-0 -rotate-6 place-items-center rounded-xl border-2 border-line bg-lilac px-2 font-body text-sm font-bold tabular-nums text-ink shadow-[3px_3px_0_var(--ink)]">
                 {si + 1} / {SECTIONS.length}
               </span>
               {section.title}
@@ -128,12 +128,12 @@ export default function Questionnaire() {
 
       <div className="grid gap-3 py-8">
         {showErrors && missing.length > 0 && (
-          <p className="rounded-lg bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
+          <p className="rounded-xl border-2 border-danger bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
             Please fill in: {missing.map((q) => q.label).join(", ")}.
           </p>
         )}
         {status.kind === "error" && (
-          <p className="rounded-lg bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
+          <p className="rounded-xl border-2 border-danger bg-danger-soft px-4 py-3 text-[15px] text-danger" role="alert">
             {status.message}
           </p>
         )}
@@ -141,9 +141,9 @@ export default function Questionnaire() {
           <button
             type="submit"
             disabled={status.kind === "sending"}
-            className="rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-60"
+            className="btn-chunky px-7 py-4 text-base disabled:opacity-60"
           >
-            {status.kind === "sending" ? "Sending…" : "Send my answers"}
+            {status.kind === "sending" ? "Sending…" : "Send my answers ✦"}
           </button>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function Questionnaire() {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-ink placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent";
+  "w-full rounded-xl border-2 border-line bg-surface px-3.5 py-3 text-ink placeholder:text-muted focus-visible:outline-none focus-visible:shadow-[3px_3px_0_var(--punch)]";
 
 function Field({
   q,
@@ -204,11 +204,11 @@ function Field({
                   className="peer absolute inset-0 m-0 cursor-pointer opacity-0 disabled:cursor-not-allowed"
                 />
                 <span
-                  className={`inline-block cursor-pointer select-none rounded-full border px-3.5 py-2 text-[15px] peer-checked:border-accent peer-checked:bg-accent-soft peer-checked:font-semibold peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent ${
+                  className={`inline-block cursor-pointer select-none rounded-full border-2 px-3.5 py-2 text-[15px] transition-transform hover:-translate-y-0.5 peer-checked:bg-sun peer-checked:font-bold peer-checked:shadow-[3px_3px_0_var(--ink)] peer-focus-visible:outline-3 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-punch ${
                     invalid ? "border-danger" : "border-line"
                   } bg-surface`}
                 >
-                  {checked && <span className="text-accent">✓ </span>}
+                  {checked && <span>✓ </span>}
                   {opt}
                 </span>
               </label>
