@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Natasha · Novela Creative Co</title>
-  <meta name="description" content="Natasha, founder of Novela Creative Co. Logos and branding, websites and custom apps for small businesses.">
+  <title>Natasha · Nuvela Creative Co</title>
+  <meta name="description" content="Natasha, founder of Nuvela Creative Co. Logos and branding, websites and custom apps for small businesses.">
   <!-- Link previews when the card is texted or shared. Update the domain in og:url and og:image when the custom domain is live. -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Natasha · Novela Creative Co">
+  <meta property="og:title" content="Natasha · Nuvela Creative Co">
   <meta property="og:description" content="Branding, websites and apps for small businesses. Tap to call, save my contact info or start a project.">
   <meta property="og:url" content="https://hardywebdesign.vercel.app/card">
   <meta property="og:image" content="https://hardywebdesign.vercel.app/images/card-share.jpg">
@@ -41,7 +41,7 @@
 
     .banner { height: 132px; background: var(--ink); position: relative; }
     .banner::after {
-      /* the Novela bookmark hanging from the top edge */
+      /* the Nuvela bookmark hanging from the top edge */
       content: ""; position: absolute; right: 30px; top: 0; width: 28px; height: 58px; background: var(--accent);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
     }
@@ -113,7 +113,7 @@
 <body>
   <main class="card">
     <div class="banner">
-      <a class="logo" href="/"><b aria-hidden="true">N</b><span>Novela<small>Creative Co.</small></span></a>
+      <a class="logo" href="/"><b aria-hidden="true">N</b><span>Nuvela<small>Creative Co.</small></span></a>
     </div>
 
     <div class="photo">
@@ -209,7 +209,7 @@
 
     // Share: native share sheet on phones, copy the link everywhere else
     document.getElementById("share").addEventListener("click", async () => {
-      const data = { title: "Natasha · Novela Creative Co", text: "Here's Natasha's card from Novela Creative Co. Branding, websites and apps for small businesses:", url: cardUrl };
+      const data = { title: "Natasha · Nuvela Creative Co", text: "Here's Natasha's card from Nuvela Creative Co. Branding, websites and apps for small businesses:", url: cardUrl };
       if (navigator.share) {
         try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; }
       }
@@ -228,7 +228,7 @@
         "VERSION:3.0",
         "N:;Natasha;;;",
         "FN:Natasha",
-        "ORG:Novela Creative Co",
+        "ORG:Nuvela Creative Co",
         "TEL;TYPE=CELL,VOICE:+1-616-244-8541",
         "TITLE:Founder & Creative Director",
         "URL:" + siteUrl,
@@ -239,7 +239,7 @@
       const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = "Natasha-Novela-Creative-Co.vcf";
+      a.download = "Natasha-Nuvela-Creative-Co.vcf";
       document.body.appendChild(a);
       a.click();
       a.remove();

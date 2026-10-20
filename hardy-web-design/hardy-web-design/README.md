@@ -1,6 +1,6 @@
-# Novela Creative Co
+# Nuvela Creative Co
 
-Next.js + Tailwind + TypeScript site for Novela Creative Co (branding, websites and apps).
+Next.js + Tailwind + TypeScript site for Nuvela Creative Co (branding, websites and apps).
 
 - `/` is the portfolio: plain HTML in `public/index.html` with `public/styles.css`, `public/script.js` and `public/images/`
   (served at `/` by a rewrite in `next.config.ts`). Edit those files directly.
@@ -20,7 +20,7 @@ Submissions are sent with [Resend](https://resend.com) (free for up to 3,000 ema
 
 Until you verify your own domain in Resend, emails come from `onboarding@resend.dev` and can only be
 delivered to your Resend account's email. After verifying a domain, add `FROM_EMAIL`, for example
-`Novela Creative Co <hello@yourdomain.com>`.
+`Nuvela Creative Co <hello@yourdomain.com>`.
 
 ## Editing the questions
 

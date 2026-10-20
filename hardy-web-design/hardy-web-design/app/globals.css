@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Novela Creative Co palette. Matches public/styles.css (home page) and public/card.html. Light-only, like the home page. */
+/* Nuvela Creative Co palette. Matches public/styles.css (home page) and public/card.html. Light-only, like the home page. */
 :root {
   --bg: #fbf7f1;
   --surface: #ffffff;
@@ -45,7 +45,7 @@ body {
 h1, h2 { text-wrap: balance; letter-spacing: -0.015em; }
 h1 em, h2 em { font-style: italic; color: var(--accent-bright); }
 
-/* Logo: the Novela bookmark, same as the home page */
+/* Logo: the Nuvela bookmark, same as the home page */
 .logo-mark {
   display: grid; place-items: start center; width: 34px; height: 44px; padding-top: 5px;
   background: var(--accent-bright); color: #fff;
@@ -55,12 +55,12 @@ h1 em, h2 em { font-style: italic; color: var(--accent-bright); }
 }
 .logo:hover .logo-mark { transform: translateY(-3px); }
 
-.btn-novela {
+.btn-nuvela {
   display: inline-flex; align-items: center; gap: .5em;
   background: var(--ink); color: var(--bg); font-weight: 600; text-decoration: none;
   border-radius: 999px; transition: transform .2s ease, box-shadow .2s ease;
 }
-.btn-novela:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(31, 33, 51, 0.18); }
+.btn-nuvela:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(31, 33, 51, 0.18); }
 
 :focus-visible { outline: 3px solid var(--accent-bright); outline-offset: 3px; }
 

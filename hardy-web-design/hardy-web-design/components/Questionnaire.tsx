@@ -141,7 +141,7 @@ export default function Questionnaire() {
           <button
             type="submit"
             disabled={status.kind === "sending"}
-            className="btn-novela px-7 py-4 text-base disabled:opacity-60"
+            className="btn-nuvela px-7 py-4 text-base disabled:opacity-60"
           >
             {status.kind === "sending" ? "Sending…" : "Send my answers"}
           </button>

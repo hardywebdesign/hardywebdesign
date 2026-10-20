@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 N
               </span>
               <span className="flex flex-col font-display text-2xl font-medium leading-none">
-                Novela
+                Nuvela
                 <small className="mt-1.5 font-body text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-muted">
                   Creative Co.
                 </small>

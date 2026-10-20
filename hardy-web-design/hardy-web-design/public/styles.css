@@ -1,4 +1,4 @@
-/* Novela Creative Co. Shared tokens also live in app/globals.css (questionnaire) and public/card.html. */
+/* Nuvela Creative Co. Shared tokens also live in app/globals.css (questionnaire) and public/card.html. */
 :root {
   --paper: #FBF7F1;
   --white: #FFFFFF;
@@ -58,7 +58,7 @@ p { margin: 0 0 1em; }
 /* ---------- Logo ---------- */
 .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .logo__mark {
-  /* The bookmark: Novela's signature shape */
+  /* The bookmark: Nuvela's signature shape */
   display: grid; place-items: start center; width: 34px; height: 44px; padding-top: 5px;
   background: var(--accent); color: var(--white);
   font: italic 600 1.35rem/1 var(--serif);
